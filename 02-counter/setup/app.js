@@ -21,16 +21,21 @@ btns.forEach(function (btn) {
         // ROUGH IDEA FOR HOW TO CHANGE COLOR ALONGSIDE COUNT, BUT 
         // IDK HOW TO TARGET CONTENT COLOR YET
         // SAVING NOW TO FINISH LATER 
+        //
+        // IT'S 'value.style.color = xxxxxx'
+        // value ---> is the ID of my span (where text is)
+        // style ---> targets a css style to change
+        // color ---> self explanatory.
 
-        // if (count < 0) {
-        //     value.textColor = red;
-        // } 
-        // else if (count = 0) {
-        //     value.textColor = black;
-        // } 
-        // else if (count > 0) {
-        //     value.textColor = green;
-        // }
+        if (count < 0) {
+            value.style.color = red;
+        } 
+        else if (count = 0) {
+            value.style.color = black;
+        } 
+        else if (count > 0) {
+            value.style.color = green;
+        }
         value.textContent = count;
     })
 })
