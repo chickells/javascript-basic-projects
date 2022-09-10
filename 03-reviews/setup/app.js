@@ -37,3 +37,41 @@ const reviews = [
       "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
   },
 ];
+
+// select items
+const img = document.getElementById("person-img")
+const author = document.getElementById("author")
+const job = document.getElementById("job")
+const info = document.getElementById("info")
+
+const prevBtn = document.querySelector(".prev-btn")
+const nextBtn = document.querySelector(".next-btn")
+const randomBtn = document.querySelector(".random-btn")
+
+// set starting item
+let currentItem = 0;
+
+// load initial item
+window.addEventListener('DOMContentLoaded', function() {
+  const item = reviews[currentItem];
+  
+  // YO I FINALLY LEARNED HOW THIS WORKS
+  // setting 'item' above lets me target
+  // '.img' / '.name' / etc OF that item
+  // in the array above.
+  
+  // THEN the left side targets the existing
+  // html content and replaces it with
+  // the data from the array.
+  // DAMN BRO THIS SHIT IS LIT 
+  // OKAYYYY IT'S ALL MAKING A LITTLE SENSE NOW
+  
+  // there are fucking TONS of these
+  // built in selector functions to learn tho
+
+  img.src = item.img; 
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+});
+
