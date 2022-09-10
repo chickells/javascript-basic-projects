@@ -13,15 +13,12 @@ btn.addEventListener ('click', function(){
     // BUT I am having trouble getting it to loop through 6 times and 
     // append onto itself to create a six digit hex 
 
+    // don't use 'if', use 'for' (haven't learned those yet)
+
     let hexColor = '#';
-    let n = 0;
-    function hexCreator(n) {
-        if (n < 6) {
-            hexColor += hex[Math.floor(Math.random() * hex.length)];
-            console.log(hexColor);
-            n += 1
-        } else {
-        return hexColor
-        }
+    for (let i = 0; i<6, i++){
+        hexColor += hex[Math.floor(Math.random() * hex.length)];
+        console.log(hexColor);
     }
+        
 })
