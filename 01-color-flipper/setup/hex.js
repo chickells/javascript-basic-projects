@@ -15,10 +15,13 @@ btn.addEventListener ('click', function(){
 
     // don't use 'if', use 'for' (haven't learned those yet)
 
-    let hexColor = '#';
-    for (let i = 0; i<6, i++){
+    let hexColor = "#";
+    for (let i = 0; i < 6; i++) {
         hexColor += hex[Math.floor(Math.random() * hex.length)];
         console.log(hexColor);
     }
+
+    color.textContent = hexColor;
+    document.body.style.backgroundColor = hexColor;
         
 })
