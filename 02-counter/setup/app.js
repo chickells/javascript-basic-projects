@@ -16,7 +16,7 @@ btns.forEach(function (btn) {
         }
         else if (styles.contains('increase')){
             count++;
-        } 
+        }
 
         // ROUGH IDEA FOR HOW TO CHANGE COLOR ALONGSIDE COUNT, BUT 
         // IDK HOW TO TARGET CONTENT COLOR YET
@@ -28,13 +28,13 @@ btns.forEach(function (btn) {
         // color ---> self explanatory.
 
         if (count < 0) {
-            value.style.color = red;
+            value.style.color = 'red';
         } 
-        else if (count = 0) {
-            value.style.color = black;
+        else if (count === 0) {
+            value.style.color = 'black';
         } 
         else if (count > 0) {
-            value.style.color = green;
+            value.style.color = 'green';
         }
         value.textContent = count;
     })
