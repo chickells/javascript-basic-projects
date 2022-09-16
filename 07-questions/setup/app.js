@@ -21,6 +21,13 @@ must be missing something.... hmmmm
 
 ALRIGHT LETS GO TO CALSPEED YA C00NTS*/
 
+/* YO HOLD UP, IF YOU STRAIGHT UP REPLACE 'QUESTION-TEXT'
+WITH 'SHOW-TEXT' IT ACTUALLY SHOWS THE TEXT BUT YOU LOSE THE DIVIDER
+LINE...HMMMMM. TUNE IN NEXT WEEK TO SEE IF I FIGURE THIS ISH OUT.
+
+GG'S 
+*/
+
 
 const expandBtn = document.querySelector('.question-btn')
 const toggleText = document.querySelector('.question-text')
