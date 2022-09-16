@@ -14,7 +14,10 @@ console.log(linkClass);
 
 
 toggle.addEventListener('click', function () {
-    if (linkClass.contains('.show-links')) {
-        // remove 'show-links', else add 'show-links'
-    }
-})  
+    // if (linkClass.classList.contains('show-links')) {
+    //     linkClass.classList.remove('show-links');
+    // } else {
+    //     linkClass.classList.add('show-links');
+    // }
+    linkClass.classList.toggle('show-links');
+});
