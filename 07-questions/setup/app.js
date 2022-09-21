@@ -28,11 +28,15 @@ LINE...HMMMMM. TUNE IN NEXT WEEK TO SEE IF I FIGURE THIS ISH OUT.
 GG'S 
 */
 
+// 9.20.22 Tuesday night update
+// learning that i don't know how forEach works
 
-const expandBtn = document.querySelector('.question-btn')
+const btns = document.querySelectorAll('.question-btn')
 const toggleText = document.querySelector('.question-text')
 
-console.log(expandBtn);
-expandBtn.addEventListener('click', function (){
-    toggleText.classList.toggle('show-text')
+btns.forEach(function (btn) {
+    btn.addEventListener("click", function(e) {
+        const parentClass = e.currentTarget.parentElement.parentElement;
+        parentClass.classList.toggle('show-text')
+    });
 });
