@@ -31,12 +31,33 @@ GG'S
 // 9.20.22 Tuesday night update
 // learning that i don't know how forEach works
 
+// this method select specific items instead of scanning entire document
+
 const btns = document.querySelectorAll('.question-btn')
 const toggleText = document.querySelector('.question-text')
 
-btns.forEach(function (btn) {
-    btn.addEventListener("click", function(e) {
-        const parentClass = e.currentTarget.parentElement.parentElement;
-        parentClass.classList.toggle('show-text')
-    });
-});
+const questions = document.querySelectorAll('.question');
+console.log(questions);
+
+questions.forEach(function (question) {
+    const btn = question.querySelector('.question-btn');
+    console.log(question);
+    btn.addEventListener('click', function() {
+        questions.forEach(function (item) {
+            console.log(item);
+            if (item !== question) {
+                item.classList.remove('show-text');
+            }
+        })
+        question.classList.toggle('show-text');
+    })
+})
+
+// THIS IS HOW TO DO VIA TRAVERSING THE DOM
+
+// btns.forEach(function (btn) {
+//     btn.addEventListener("click", function(e) {
+//         const parentClass = e.currentTarget.parentElement.parentElement;
+//         parentClass.classList.toggle('show-text')
+//     });
+// });
